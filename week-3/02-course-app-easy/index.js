@@ -21,8 +21,7 @@ const userAuthentication  = (req,res,next) =>{
   const headers = req.headers
   const user = USERS.find(ele => ele.username ===headers.username && ele.password === headers.password)
  
-  if(    req.user = user
-    ){
+  if( req.user = user){
     req.user = user
     next();
   }else{
